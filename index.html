@@ -107,9 +107,15 @@ a{color:inherit}
   line-height:1.05;white-space:nowrap;letter-spacing:.04em}
 .brand i{font-style:normal;font-size:10px;letter-spacing:.14em;color:var(--gold-lit);
   display:block;margin-top:4px;white-space:nowrap}
-/* the second line will not fit beside the button on a phone */
-@media (max-width:600px){.brand i{display:none}}
-@media (max-width:340px){.brandtext{display:none}}
+/* on a phone the second line wraps onto two rather than disappearing */
+@media (max-width:600px){
+  .brand img,.brandflat{width:40px;height:40px}
+  .brand{gap:10px}
+  .brand b{font-size:17px}
+  .brand i{white-space:normal;font-size:8.8px;letter-spacing:.09em;
+    line-height:1.2;margin-top:3px;max-width:13ch}
+}
+@media (max-width:330px){.brand i{display:none}}
 .nav{margin-left:auto;display:flex;gap:24px}
 .nav a{color:#CFDDE6;text-decoration:none;font-size:14.5px;font-weight:500;position:relative}
 .nav a::after{content:"";position:absolute;left:0;right:100%;bottom:-6px;height:2px;
